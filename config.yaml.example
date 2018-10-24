@@ -1,0 +1,9 @@
+---
+- sender:
+    pattern: awesome-domain.com$
+    header_key: X-MSYS-API
+    header_value: '{"options": {"transactional": true}, "tags": ["so awesome"]}'
+- sender:
+    pattern: another-domain.org$
+    header_key: X-MSYS-API
+    header_value: '{"options": {"transactional": true}, "tags": ["other tag"]}'
