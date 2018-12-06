@@ -39,13 +39,13 @@ class AddHeaderMilter(libmilter.ForkMixin, libmilter.MilterProtocol):
 
     def start(self):
         """Override method in ForkMixin"""
-        logger.info('Starting...')
+        logger.debug('Starting...')
         super(AddHeaderMilter, self).start()
-        logger.info('Started!')
+        logger.debug('Started!')
 
     def run(self):
         """Override method in ForkMixin"""
-        logger.info('Running!')
+        logger.debug('Running...')
         super(AddHeaderMilter, self).run()
 
     @libmilter.noReply
@@ -120,7 +120,7 @@ class AddHeaderMilter(libmilter.ForkMixin, libmilter.MilterProtocol):
         return libmilter.CONTINUE
 
     def close(self):
-        logger.info('Close called. QID: %s', self.message_id)
+        logger.debug('Close called. QID: %s', self.message_id)
         logger.debug('Transport is %s', self.transport)
         logger.debug('Socket is %s', self._socket)
         if self._socket:
