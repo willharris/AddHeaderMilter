@@ -1,3 +1,4 @@
 #!/bin/sh
 exec 2>&1
+#exec setuidgid harris env HOME=/home/harris /home/harris/Envs/AddHeaderMilter/bin/python -u ./add_header_milter.py -l DEBUG ./config.yaml
 exec setuidgid harris env HOME=/home/harris /home/harris/Envs/AddHeaderMilter/bin/python -u ./add_header_milter.py ./config.yaml
